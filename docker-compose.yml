@@ -1,0 +1,16 @@
+version: "3.6"
+ 
+services:
+ send_email:
+    build:
+      context: .
+    container_name: send_email
+    image: send_email
+    environment:
+      - User=example_mailadress@outlook.com
+      - PW=
+      - FROM=example_mailadress@outlook.com
+      - TO=example_mailadress2@outlook.com
+      - Subject=test auto mail
+      - Body='Email\'s BODY text
+      - Attachment=
